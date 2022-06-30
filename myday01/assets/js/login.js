@@ -39,7 +39,7 @@ $(function() {
         e.preventDefault()
         axios({
             method: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/reguser',
+            url: '/api/reguser',
             headers: { 'content-type': 'application/x-www-form-urlencoded' },
             data: `username=${$('#form_reg [name=username]').val()}&password=${$('#form_reg [name=password]').val()}`
         }).then(function(res) {
@@ -60,7 +60,7 @@ $(function() {
         e.preventDefault()
         axios({
             method: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/login',
+            url: '/api/login',
             headers: { 'content-type': 'application/x-www-form-urlencoded' },
             data: `${$(this).serialize()}`
         }).then(function(res) {
